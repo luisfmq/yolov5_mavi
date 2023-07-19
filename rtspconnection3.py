@@ -2,7 +2,7 @@ import cv2, torch, datetime
 import numpy as np
 
 def draw_bounding_boxes(video_path):
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path='crowdhuman_yolov5m.pt')
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5n.pt')
     video_capture = cv2.VideoCapture(video_path)
     cv2.namedWindow('frame', cv2.WINDOW_NORMAL)
     frame_count, pIn, pOut, last_ym, counted_people = 0, 0, 0, None, set()
